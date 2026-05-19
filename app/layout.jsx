@@ -1,7 +1,6 @@
 import "./globals.css";
-import ScrollProgress from "@/components/ScrollProgress";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import { StyleProvider } from "@/components/StyleProvider";
+import SiteShell from "@/components/SiteShell";
 
 export const metadata = {
   title: "Mahanth — Aspiring DevOps Engineer | Python Automation",
@@ -44,6 +43,22 @@ export const viewport = {
   initialScale: 1,
 };
 
+// No-FOUC: read saved style before React hydrates and apply data attribute + body class.
+const styleBootScript = `
+(function() {
+  try {
+    var s = localStorage.getItem('portfolio-style');
+    if (s === 'classic') {
+      document.documentElement.setAttribute('data-style', 'classic');
+      document.documentElement.classList.remove('dark');
+      document.body && document.body.classList.add('classic-body');
+    } else {
+      document.documentElement.setAttribute('data-style', 'custom');
+    }
+  } catch (e) {}
+})();
+`;
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
@@ -55,15 +70,15 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
+        <script dangerouslySetInnerHTML={{ __html: styleBootScript }} />
       </head>
       <body className="bg-bg text-white antialiased overflow-x-hidden">
-        <ScrollProgress />
-        <Navbar />
-        <main className="relative">{children}</main>
-        <Footer />
+        <StyleProvider>
+          <SiteShell>{children}</SiteShell>
+        </StyleProvider>
       </body>
     </html>
   );

@@ -52,13 +52,13 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <a href="#contact" className="hidden md:inline-flex btn-primary py-2 px-4 text-xs">
+        <a href="#contact" className="hidden md:inline-flex btn-primary py-2 px-4 text-xs mr-[210px]">
           Let&apos;s Connect
         </a>
 
         <button
           aria-label="Toggle menu"
-          className="md:hidden p-2 rounded-md border border-white/10 text-white/80"
+          className="md:hidden p-2 rounded-md border border-white/10 text-white/80 mr-[120px]"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
