@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #070b14;
+  --bg-soft: #0b1220;
+  --neon-cyan: #22d3ee;
+  --neon-purple: #a855f7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background-color: var(--bg);
+  color: #e5e7eb;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.35);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0b1220;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #22d3ee, #a855f7);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #67e8f9, #c084fc);
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/[0.03] backdrop-blur-xl border border-white/10;
+  }
+  .glass-hover {
+    @apply hover:bg-white/[0.06] hover:border-cyan-400/40 transition-all duration-300;
+  }
+  .neon-text {
+    background: linear-gradient(90deg, #22d3ee, #a855f7, #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 200% 200%;
+    animation: gradient-x 8s ease infinite;
+  }
+  .neon-border {
+    @apply border border-cyan-400/30;
+    box-shadow: 0 0 14px rgba(34, 211, 238, 0.18),
+      inset 0 0 14px rgba(34, 211, 238, 0.05);
+  }
+  .btn-primary {
+    @apply relative inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-mono text-sm
+           bg-gradient-to-r from-cyan-500 to-purple-600 text-white
+           hover:shadow-neon-strong transition-all duration-300
+           hover:scale-[1.02] active:scale-[0.98];
+  }
+  .btn-ghost {
+    @apply relative inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-mono text-sm
+           border border-white/15 text-white/85
+           hover:border-cyan-400/60 hover:text-cyan-300 hover:shadow-neon
+           transition-all duration-300;
+  }
+  .chip {
+    @apply inline-flex items-center px-2.5 py-1 text-xs rounded-md font-mono
+           bg-white/[0.04] border border-white/10 text-white/80;
+  }
+  .section {
+    @apply relative w-full py-24 px-4 sm:px-6 lg:px-8;
+  }
+  .container-x {
+    @apply max-w-6xl mx-auto;
+  }
+  .h-section {
+    @apply text-3xl sm:text-4xl font-bold tracking-tight;
+  }
+  .grid-bg {
+    background-image: linear-gradient(
+        to right,
+        rgba(34, 211, 238, 0.06) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgba(34, 211, 238, 0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
+
+.terminal {
+  background: linear-gradient(180deg, #0a0f1c 0%, #0b1326 100%);
+  border: 1px solid rgba(34, 211, 238, 0.25);
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+}
+
+.terminal-header {
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cursor::after {
+  content: "▍";
+  margin-left: 2px;
+  color: #22d3ee;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-red { background: #ff5f56; }
+.dot-yellow { background: #ffbd2e; }
+.dot-green { background: #27c93f; }
