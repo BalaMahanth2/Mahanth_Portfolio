@@ -1,32 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Server, Zap, GitBranch, Cloud } from "lucide-react";
 import SectionTitle from "./SectionTitle";
 import { aboutText, profile } from "@/lib/data";
-
-const highlights = [
-  {
-    Icon: GitBranch,
-    title: "1+ Yr Pipeline Dev",
-    desc: "Production Python + Linux experience in a fast-moving VFX studio.",
-  },
-  {
-    Icon: Zap,
-    title: "Automation First",
-    desc: "Default reaction to toil: write a script. Then make it idempotent.",
-  },
-  {
-    Icon: Server,
-    title: "Linux Native",
-    desc: "Rocky Linux, systemd, NGINX, networking — comfortable on the shell.",
-  },
-  {
-    Icon: Cloud,
-    title: "DevOps Bound",
-    desc: "Active learner: Docker, Kubernetes, CI/CD, AWS — building, not just reading.",
-  },
-];
 
 export default function About() {
   return (
@@ -39,11 +15,43 @@ export default function About() {
         />
 
         <div className="grid lg:grid-cols-5 gap-8 items-start">
+          {/* LEFT — photo tile + highlights */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6 }}
+            className="lg:col-span-2 space-y-4"
+          >
+            {/* Profile photo tile — Custom aesthetic with neon glow + terminal label */}
+            <div className="relative aspect-square rounded-xl glass glass-hover overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/15 to-pink-500/20" />
+              <div className="absolute inset-0 grid place-items-center pointer-events-none">
+                <div className="text-[8rem] font-bold leading-none neon-text select-none font-mono">
+                  M
+                </div>
+              </div>
+              <div
+                aria-label={profile.name}
+                role="img"
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                style={{ backgroundImage: `url('${profile.image}')` }}
+              />
+              <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-bg/85 to-transparent pointer-events-none" />
+              <div className="absolute top-3 left-3 chip font-mono text-[10px]">
+                <span className="text-emerald-400">$</span>{" "}
+                <span className="text-cyan-300">whoami</span>
+              </div>
+            </div>
+
+          </motion.div>
+
+          {/* RIGHT — content + stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6, delay: 0.1 }}
             className="lg:col-span-3 space-y-5"
           >
             {aboutText.map((p, i) => (
@@ -58,30 +66,6 @@ export default function About() {
               <Stat label="Certifications" value="2" />
               <Stat label="Coffee/day" value="∞" />
             </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="lg:col-span-2 grid sm:grid-cols-2 gap-4"
-          >
-            {highlights.map(({ Icon, title, desc }, i) => (
-              <motion.div
-                key={title}
-                whileHover={{ y: -4 }}
-                className="glass glass-hover p-4 rounded-xl group"
-              >
-                <div className="w-10 h-10 rounded-lg grid place-items-center bg-gradient-to-br from-cyan-500/20 to-purple-500/20 border border-cyan-400/20 mb-3 group-hover:shadow-neon transition">
-                  <Icon className="w-5 h-5 text-cyan-300" />
-                </div>
-                <h3 className="font-semibold text-white/90">{title}</h3>
-                <p className="text-xs text-white/55 mt-1 leading-relaxed">
-                  {desc}
-                </p>
-              </motion.div>
-            ))}
           </motion.div>
         </div>
       </div>

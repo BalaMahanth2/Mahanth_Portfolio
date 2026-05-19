@@ -44,18 +44,21 @@ export const viewport = {
 };
 
 // No-FOUC: read saved style before React hydrates and apply data attribute + body class.
+// Classic is the default — anyone who hasn't explicitly chosen 'custom' lands on Classic.
 const styleBootScript = `
 (function() {
   try {
     var s = localStorage.getItem('portfolio-style');
-    if (s === 'classic') {
-      document.documentElement.setAttribute('data-style', 'classic');
-      document.documentElement.classList.remove('dark');
-      document.body && document.body.classList.add('classic-body');
-    } else {
+    if (s === 'custom') {
       document.documentElement.setAttribute('data-style', 'custom');
+    } else {
+      document.documentElement.setAttribute('data-style', 'classic');
+      document.body && document.body.classList.add('classic-body');
     }
-  } catch (e) {}
+  } catch (e) {
+    document.documentElement.setAttribute('data-style', 'classic');
+    document.body && document.body.classList.add('classic-body');
+  }
 })();
 `;
 

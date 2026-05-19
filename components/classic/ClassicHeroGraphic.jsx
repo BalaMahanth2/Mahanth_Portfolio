@@ -39,7 +39,7 @@ export default function ClassicHeroGraphic() {
       <div className="absolute inset-[26%] rounded-full border border-white/[0.07]" />
       <div className="absolute inset-[40%] rounded-full border border-white/[0.10]" />
 
-      {/* Center orb */}
+      {/* Center orb — gradient ring with "M" monogram */}
       <div className="absolute inset-[40%] grid place-items-center">
         <motion.div
           className="classic-orb relative w-full h-full rounded-full bg-gradient-to-br from-orange-400 via-orange-500 to-red-600 grid place-items-center"

@@ -3,14 +3,16 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
 const STORAGE_KEY = "portfolio-style";
+const DEFAULT_STYLE = "classic"; // Classic is the default landing experience.
+
 const StyleContext = createContext({
-  style: "custom",
+  style: DEFAULT_STYLE,
   setStyle: () => {},
   mounted: false,
 });
 
 export function StyleProvider({ children }) {
-  const [style, setStyleState] = useState("custom");
+  const [style, setStyleState] = useState(DEFAULT_STYLE);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -32,7 +34,8 @@ export function StyleProvider({ children }) {
     }
   }, [style, mounted]);
 
-  const setStyle = (next) => setStyleState(next === "classic" ? "classic" : "custom");
+  const setStyle = (next) =>
+    setStyleState(next === "custom" ? "custom" : "classic");
 
   return (
     <StyleContext.Provider value={{ style, setStyle, mounted }}>

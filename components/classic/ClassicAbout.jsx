@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Terminal, Boxes, Server, Cloud } from "lucide-react";
 import ClassicSectionTitle from "./ClassicSectionTitle";
-import { aboutText } from "@/lib/data";
+import { aboutText, profile } from "@/lib/data";
 
 const stats = [
   { value: "1+", label: "Years Experience" },
@@ -43,8 +43,9 @@ export default function ClassicAbout() {
               {/* glow */}
               <div className="absolute -inset-6 bg-gradient-to-br from-orange-500/15 via-amber-500/15 to-red-500/15 blur-3xl rounded-full" />
 
-              {/* avatar tile */}
+              {/* avatar tile — photo on top of M fallback; photo silently fails if file missing */}
               <div className="relative w-full h-full rounded-2xl classic-card-glow overflow-hidden">
+                {/* gradient backdrop */}
                 <div
                   className="absolute inset-0"
                   style={{
@@ -52,7 +53,8 @@ export default function ClassicAbout() {
                       "linear-gradient(135deg, rgba(251,146,60,0.18), rgba(245,158,11,0.18) 40%, rgba(239,68,68,0.18))",
                   }}
                 />
-                <div className="absolute inset-0 grid place-items-center">
+                {/* Fallback letter (visible if photo file is missing) */}
+                <div className="absolute inset-0 grid place-items-center pointer-events-none">
                   <div
                     className="text-[10rem] font-bold leading-none classic-grad-text select-none"
                     style={{ fontFamily: "'Space Grotesk', sans-serif" }}
@@ -60,6 +62,15 @@ export default function ClassicAbout() {
                     M
                   </div>
                 </div>
+                {/* Photo overlay */}
+                <div
+                  aria-label={profile.name}
+                  role="img"
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{ backgroundImage: `url('${profile.image}')` }}
+                />
+                {/* Bottom gradient for chip legibility */}
+                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/55 to-transparent pointer-events-none" />
 
                 {/* corner pills */}
                 <div className="absolute top-3 left-3 classic-chip">~/about</div>
