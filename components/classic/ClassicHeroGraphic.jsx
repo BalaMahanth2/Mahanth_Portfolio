@@ -32,7 +32,7 @@ export default function ClassicHeroGraphic() {
   return (
     <div className="relative w-full max-w-[520px] aspect-square mx-auto">
       {/* Outer subtle glow */}
-      <div className="absolute inset-0 rounded-full bg-cyan-500/10 blur-3xl" />
+      <div className="absolute inset-0 rounded-full bg-orange-500/15 blur-3xl" />
 
       {/* Concentric rings */}
       <div className="absolute inset-[12%] rounded-full border border-white/[0.05]" />
@@ -42,7 +42,7 @@ export default function ClassicHeroGraphic() {
       {/* Center orb */}
       <div className="absolute inset-[40%] grid place-items-center">
         <motion.div
-          className="classic-orb relative w-full h-full rounded-full bg-gradient-to-br from-cyan-400 via-blue-500 to-indigo-600 grid place-items-center"
+          className="classic-orb relative w-full h-full rounded-full bg-gradient-to-br from-orange-400 via-orange-500 to-red-600 grid place-items-center"
           animate={{ scale: [1, 1.04, 1] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         >
@@ -74,7 +74,7 @@ export default function ClassicHeroGraphic() {
         return (
           <motion.span
             key={i}
-            className="absolute w-1 h-1 rounded-full bg-cyan-300/70"
+            className="absolute w-1 h-1 rounded-full bg-orange-300/70"
             style={{ left: `${x}%`, top: `${y}%` }}
             animate={{ opacity: [0.2, 0.9, 0.2] }}
             transition={{ duration: 3 + (i % 4), repeat: Infinity, delay: i * 0.2 }}
@@ -104,7 +104,7 @@ function Ring({ icons, radiusPct, animClass }) {
               className={animClass}
               style={{ ["--r"]: `${radiusPct}%` }}
             >
-              <div className="grid place-items-center w-10 h-10 -translate-x-1/2 -translate-y-1/2 rounded-xl bg-white/[0.04] backdrop-blur-md border border-white/10 text-cyan-300 shadow-[0_0_18px_rgba(56,189,248,0.25)]">
+              <div className="grid place-items-center w-10 h-10 -translate-x-1/2 -translate-y-1/2 rounded-xl bg-white/[0.04] backdrop-blur-md border border-white/10 text-orange-300 shadow-[0_0_18px_rgba(251,146,60,0.30)]">
                 <Icon className="w-4 h-4" />
               </div>
             </div>

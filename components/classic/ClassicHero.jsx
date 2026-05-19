@@ -72,26 +72,32 @@ export default function ClassicHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.05 }}
-            className="classic-h1 text-5xl sm:text-6xl lg:text-7xl mt-3 text-white"
+            className="classic-h1 text-5xl sm:text-6xl lg:text-7xl mt-3 text-white whitespace-nowrap"
           >
-            {profile.name.split(" ").slice(0, 2).join(" ")}
-            <br />
-            <span className="classic-grad-text">
-              {profile.name.split(" ").slice(2).join(" ")}
-            </span>
-            <span className="text-cyan-400">.</span>
+            <span className="classic-grad-text">Mahanth</span>
+            <span className="text-orange-400">.</span>
           </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="mt-3 text-sm text-white/40 tracking-[0.25em] uppercase"
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+          >
+            {profile.name}
+          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="text-xl sm:text-2xl mt-5 text-white/75 font-light min-h-[36px]"
+            className="text-xl sm:text-2xl mt-6 text-white/75 font-light min-h-[36px]"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             I&apos;m a{" "}
-            <span className="text-cyan-300 font-medium">{typed}</span>
-            <span className="inline-block w-[2px] h-6 bg-cyan-400 ml-1 align-middle animate-blink" />
+            <span className="text-orange-300 font-medium">{typed}</span>
+            <span className="inline-block w-[2px] h-6 bg-orange-400 ml-1 align-middle animate-blink" />
           </motion.div>
 
           <motion.p
@@ -137,7 +143,7 @@ export default function ClassicHero() {
               href={profile.github}
               target="_blank"
               rel="noreferrer"
-              className="p-2 rounded-full bg-white/[0.03] border border-white/10 hover:border-cyan-400/50 hover:text-cyan-300 transition"
+              className="p-2 rounded-full bg-white/[0.03] border border-white/10 hover:border-orange-400/50 hover:text-orange-300 transition"
             >
               <Github className="w-4 h-4" />
             </a>
@@ -146,14 +152,14 @@ export default function ClassicHero() {
               href={profile.linkedin}
               target="_blank"
               rel="noreferrer"
-              className="p-2 rounded-full bg-white/[0.03] border border-white/10 hover:border-cyan-400/50 hover:text-cyan-300 transition"
+              className="p-2 rounded-full bg-white/[0.03] border border-white/10 hover:border-orange-400/50 hover:text-orange-300 transition"
             >
               <Linkedin className="w-4 h-4" />
             </a>
             <a
               aria-label="Email"
               href={`mailto:${profile.email}`}
-              className="p-2 rounded-full bg-white/[0.03] border border-white/10 hover:border-cyan-400/50 hover:text-cyan-300 transition"
+              className="p-2 rounded-full bg-white/[0.03] border border-white/10 hover:border-orange-400/50 hover:text-orange-300 transition"
             >
               <Mail className="w-4 h-4" />
             </a>

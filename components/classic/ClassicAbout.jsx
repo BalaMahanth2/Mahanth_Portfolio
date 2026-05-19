@@ -41,7 +41,7 @@ export default function ClassicAbout() {
           >
             <div className="relative w-full max-w-[320px] aspect-square">
               {/* glow */}
-              <div className="absolute -inset-6 bg-gradient-to-br from-cyan-500/15 via-blue-500/15 to-indigo-500/15 blur-3xl rounded-full" />
+              <div className="absolute -inset-6 bg-gradient-to-br from-orange-500/15 via-amber-500/15 to-red-500/15 blur-3xl rounded-full" />
 
               {/* avatar tile */}
               <div className="relative w-full h-full rounded-2xl classic-card-glow overflow-hidden">
@@ -49,7 +49,7 @@ export default function ClassicAbout() {
                   className="absolute inset-0"
                   style={{
                     background:
-                      "linear-gradient(135deg, rgba(56,189,248,0.18), rgba(99,102,241,0.18) 40%, rgba(168,85,247,0.18))",
+                      "linear-gradient(135deg, rgba(251,146,60,0.18), rgba(245,158,11,0.18) 40%, rgba(239,68,68,0.18))",
                   }}
                 />
                 <div className="absolute inset-0 grid place-items-center">
@@ -73,7 +73,7 @@ export default function ClassicAbout() {
                     key={label}
                     className="classic-glass px-3 py-2 flex items-center gap-2 text-xs text-white/75"
                   >
-                    <Icon className="w-3.5 h-3.5 text-cyan-300" />
+                    <Icon className="w-3.5 h-3.5 text-orange-300" />
                     {label}
                   </div>
                 ))}

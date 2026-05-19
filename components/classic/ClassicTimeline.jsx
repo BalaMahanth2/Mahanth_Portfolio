@@ -29,7 +29,7 @@ export default function ClassicTimeline() {
 
         <div className="relative max-w-3xl mx-auto pl-6 sm:pl-0">
           {/* vertical line */}
-          <div className="absolute left-3 sm:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-cyan-400/40 to-transparent" />
+          <div className="absolute left-3 sm:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-orange-400/40 to-transparent" />
 
           <ol className="space-y-12">
             {timeline.map((t, i) => {
@@ -46,7 +46,7 @@ export default function ClassicTimeline() {
                   className="relative sm:grid sm:grid-cols-2 sm:gap-10"
                 >
                   {/* dot */}
-                  <span className="absolute left-3 sm:left-1/2 -translate-x-1/2 top-2 w-3 h-3 rounded-full bg-cyan-400 shadow-[0_0_14px_rgba(56,189,248,0.7)] ring-4 ring-[#0b0f19]" />
+                  <span className="absolute left-3 sm:left-1/2 -translate-x-1/2 top-2 w-3 h-3 rounded-full bg-orange-400 shadow-[0_0_14px_rgba(251,146,60,0.75)] ring-4 ring-[#0b0f19]" />
 
                   <div
                     className={`${
@@ -58,10 +58,10 @@ export default function ClassicTimeline() {
                         isLeft ? "sm:flex-row-reverse" : ""
                       }`}
                     >
-                      <div className="w-9 h-9 rounded-lg grid place-items-center bg-white/[0.04] border border-white/10 text-cyan-300">
+                      <div className="w-9 h-9 rounded-lg grid place-items-center bg-white/[0.04] border border-white/10 text-orange-300">
                         <Icon className="w-4 h-4" />
                       </div>
-                      <span className="text-xs text-cyan-300/80 tracking-[0.18em] uppercase">
+                      <span className="text-xs text-orange-300/80 tracking-[0.18em] uppercase">
                         Step {String(i + 1).padStart(2, "0")}
                       </span>
                     </div>

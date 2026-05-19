@@ -27,11 +27,11 @@ export default function ClassicExperience() {
               className="relative classic-card-glow p-6 sm:p-8 pl-7"
             >
               {/* Glow left border */}
-              <div className="absolute left-0 top-6 bottom-6 w-[3px] bg-gradient-to-b from-cyan-400 via-indigo-400 to-purple-400 rounded-full shadow-[0_0_12px_rgba(56,189,248,0.55)]" />
+              <div className="absolute left-0 top-6 bottom-6 w-[3px] bg-gradient-to-b from-orange-400 via-amber-400 to-red-500 rounded-full shadow-[0_0_12px_rgba(251,146,60,0.55)]" />
 
               <div className="flex flex-col sm:flex-row sm:items-start gap-5">
-                <div className="w-12 h-12 rounded-xl grid place-items-center bg-gradient-to-br from-cyan-500/20 to-indigo-500/20 border border-cyan-400/30 shrink-0 shadow-[0_0_24px_rgba(56,189,248,0.25)]">
-                  <Briefcase className="w-5 h-5 text-cyan-300" />
+                <div className="w-12 h-12 rounded-xl grid place-items-center bg-gradient-to-br from-orange-500/20 to-red-500/20 border border-orange-400/30 shrink-0 shadow-[0_0_24px_rgba(251,146,60,0.30)]">
+                  <Briefcase className="w-5 h-5 text-orange-300" />
                 </div>
 
                 <div className="flex-1">
@@ -42,11 +42,11 @@ export default function ClassicExperience() {
                     >
                       {e.role}
                     </h3>
-                    <span className="classic-chip border-cyan-400/30 text-cyan-300">
+                    <span className="classic-chip border-orange-400/30 text-orange-300">
                       {e.period}
                     </span>
                   </div>
-                  <p className="text-sm text-cyan-300/90 mt-1">@ {e.company}</p>
+                  <p className="text-sm text-orange-300/90 mt-1">@ {e.company}</p>
                   <p className="text-xs text-white/40 mt-1 flex items-center gap-1.5">
                     <MapPin className="w-3 h-3" />
                     {e.location}
@@ -58,7 +58,7 @@ export default function ClassicExperience() {
                         key={b}
                         className="flex items-start gap-2 text-sm text-white/65 leading-relaxed"
                       >
-                        <CheckCircle2 className="w-4 h-4 mt-0.5 text-cyan-400 shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 mt-0.5 text-orange-400 shrink-0" />
                         <span>{b}</span>
                       </li>
                     ))}

@@ -15,7 +15,7 @@ export default function ClassicFooter() {
             href={profile.github}
             target="_blank"
             rel="noreferrer"
-            className="p-2 rounded-full border border-white/10 text-white/65 hover:text-cyan-300 hover:border-cyan-400/50 transition"
+            className="p-2 rounded-full border border-white/10 text-white/65 hover:text-orange-300 hover:border-orange-400/50 transition"
           >
             <Github className="w-4 h-4" />
           </a>
@@ -24,14 +24,14 @@ export default function ClassicFooter() {
             href={profile.linkedin}
             target="_blank"
             rel="noreferrer"
-            className="p-2 rounded-full border border-white/10 text-white/65 hover:text-cyan-300 hover:border-cyan-400/50 transition"
+            className="p-2 rounded-full border border-white/10 text-white/65 hover:text-orange-300 hover:border-orange-400/50 transition"
           >
             <Linkedin className="w-4 h-4" />
           </a>
           <a
             aria-label="Email"
             href={`mailto:${profile.email}`}
-            className="p-2 rounded-full border border-white/10 text-white/65 hover:text-cyan-300 hover:border-cyan-400/50 transition"
+            className="p-2 rounded-full border border-white/10 text-white/65 hover:text-orange-300 hover:border-orange-400/50 transition"
           >
             <Mail className="w-4 h-4" />
           </a>

@@ -66,7 +66,7 @@ export default function ClassicProjects() {
                   <div className={`absolute inset-0 bg-gradient-to-br ${p.accent} opacity-60`} />
                   <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:24px_24px]" />
                   <div className="absolute inset-0 grid place-items-center">
-                    <div className="w-16 h-16 rounded-2xl bg-white/[0.06] backdrop-blur-md border border-white/15 grid place-items-center text-cyan-200 shadow-[0_0_30px_rgba(56,189,248,0.35)] group-hover:scale-110 transition-transform duration-500">
+                    <div className="w-16 h-16 rounded-2xl bg-white/[0.06] backdrop-blur-md border border-white/15 grid place-items-center text-orange-200 shadow-[0_0_30px_rgba(251,146,60,0.40)] group-hover:scale-110 transition-transform duration-500">
                       <Icon className="w-7 h-7" />
                     </div>
                   </div>
@@ -77,7 +77,7 @@ export default function ClassicProjects() {
                 <div className="p-5 flex flex-col flex-1">
                   <div className="flex items-start justify-between gap-3 mb-2">
                     <h3
-                      className="text-base font-semibold text-white group-hover:text-cyan-300 transition leading-snug"
+                      className="text-base font-semibold text-white group-hover:text-orange-300 transition leading-snug"
                       style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                     >
                       {p.title}
@@ -89,7 +89,7 @@ export default function ClassicProjects() {
                           href={p.github}
                           target="_blank"
                           rel="noreferrer"
-                          className="p-1.5 rounded-md text-white/55 hover:text-cyan-300 hover:bg-white/[0.05] transition"
+                          className="p-1.5 rounded-md text-white/55 hover:text-orange-300 hover:bg-white/[0.05] transition"
                         >
                           <Github className="w-4 h-4" />
                         </a>
@@ -100,7 +100,7 @@ export default function ClassicProjects() {
                           href={p.demo}
                           target="_blank"
                           rel="noreferrer"
-                          className="p-1.5 rounded-md text-white/55 hover:text-cyan-300 hover:bg-white/[0.05] transition"
+                          className="p-1.5 rounded-md text-white/55 hover:text-orange-300 hover:bg-white/[0.05] transition"
                         >
                           <ExternalLink className="w-4 h-4" />
                         </a>

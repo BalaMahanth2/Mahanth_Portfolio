@@ -31,10 +31,10 @@ export default function ClassicCertifications() {
                 className="classic-card-glow p-6"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 rounded-xl grid place-items-center bg-gradient-to-br from-cyan-500/20 to-indigo-500/20 border border-cyan-400/30 shadow-[0_0_24px_rgba(56,189,248,0.25)]">
-                    <Icon className="w-5 h-5 text-cyan-300" />
+                  <div className="w-12 h-12 rounded-xl grid place-items-center bg-gradient-to-br from-orange-500/20 to-red-500/20 border border-orange-400/30 shadow-[0_0_24px_rgba(251,146,60,0.30)]">
+                    <Icon className="w-5 h-5 text-orange-300" />
                   </div>
-                  <span className="text-[10px] font-medium px-2 py-1 rounded border border-cyan-400/30 text-cyan-300 bg-cyan-400/5 tracking-[0.2em]">
+                  <span className="text-[10px] font-medium px-2 py-1 rounded border border-orange-400/30 text-orange-300 bg-orange-400/5 tracking-[0.2em]">
                     {c.badge}
                   </span>
                 </div>
@@ -45,7 +45,7 @@ export default function ClassicCertifications() {
                 >
                   {c.title}
                 </h3>
-                <p className="text-xs text-cyan-300/75 mt-1">{c.issuer}</p>
+                <p className="text-xs text-orange-300/75 mt-1">{c.issuer}</p>
                 <p className="text-sm text-white/55 mt-3 leading-relaxed">
                   {c.desc}
                 </p>

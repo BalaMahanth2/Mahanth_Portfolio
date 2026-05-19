@@ -30,7 +30,7 @@ export default function ClassicGitHubStats() {
             <img
               alt="GitHub Stats"
               loading="lazy"
-              src={`https://github-readme-stats.vercel.app/api?username=${user}&show_icons=true&hide_border=true&bg_color=00000000&title_color=38BDF8&icon_color=A78BFA&text_color=E2E8F0&ring_color=38BDF8`}
+              src={`https://github-readme-stats.vercel.app/api?username=${user}&show_icons=true&hide_border=true&bg_color=00000000&title_color=FB923C&icon_color=EF4444&text_color=E2E8F0&ring_color=FB923C`}
               className="w-full"
             />
           </motion.div>
@@ -46,7 +46,7 @@ export default function ClassicGitHubStats() {
             <img
               alt="GitHub Streak"
               loading="lazy"
-              src={`https://github-readme-streak-stats.herokuapp.com/?user=${user}&hide_border=true&background=00000000&stroke=00000000&ring=38BDF8&fire=A78BFA&currStreakLabel=38BDF8&sideLabels=E2E8F0&dates=E2E8F0&sideNums=E2E8F0&currStreakNum=E2E8F0`}
+              src={`https://github-readme-streak-stats.herokuapp.com/?user=${user}&hide_border=true&background=00000000&stroke=00000000&ring=FB923C&fire=EF4444&currStreakLabel=FB923C&sideLabels=E2E8F0&dates=E2E8F0&sideNums=E2E8F0&currStreakNum=E2E8F0`}
               className="w-full"
             />
           </motion.div>
@@ -62,7 +62,7 @@ export default function ClassicGitHubStats() {
             <img
               alt="Top Languages"
               loading="lazy"
-              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${user}&layout=compact&hide_border=true&bg_color=00000000&title_color=38BDF8&text_color=E2E8F0&langs_count=8`}
+              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${user}&layout=compact&hide_border=true&bg_color=00000000&title_color=FB923C&text_color=E2E8F0&langs_count=8`}
               className="w-full"
             />
           </motion.div>
@@ -75,7 +75,7 @@ export default function ClassicGitHubStats() {
             className="classic-glass p-5 flex flex-col justify-between"
           >
             <div>
-              <div className="flex items-center gap-2 text-cyan-300 mb-2">
+              <div className="flex items-center gap-2 text-orange-300 mb-2">
                 <Github className="w-5 h-5" />
                 <h3
                   className="text-sm font-semibold"
@@ -92,14 +92,14 @@ export default function ClassicGitHubStats() {
             <img
               alt="GitHub contribution chart"
               loading="lazy"
-              src={`https://ghchart.rshah.org/38bdf8/${user}`}
+              src={`https://ghchart.rshah.org/fb923c/${user}`}
               className="w-full rounded-md bg-white/[0.02] p-3 border border-white/5"
             />
             <a
               href={profile.github}
               target="_blank"
               rel="noreferrer"
-              className="mt-4 inline-flex items-center gap-2 text-xs text-cyan-300 hover:text-cyan-200 self-start"
+              className="mt-4 inline-flex items-center gap-2 text-xs text-orange-300 hover:text-orange-200 self-start"
             >
               <Github className="w-3.5 h-3.5" /> github.com/{user}
             </a>

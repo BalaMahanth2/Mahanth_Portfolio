@@ -14,13 +14,13 @@ import ClassicSectionTitle from "./ClassicSectionTitle";
 import { skills } from "@/lib/data";
 
 const CATEGORY_META = {
-  Programming: { Icon: Code2, hue: "from-cyan-500/15 to-blue-500/15" },
-  "Operating Systems": { Icon: Terminal, hue: "from-emerald-500/15 to-cyan-500/15" },
-  "DevOps Tools": { Icon: Container, hue: "from-blue-500/15 to-indigo-500/15" },
-  Cloud: { Icon: Cloud, hue: "from-indigo-500/15 to-purple-500/15" },
-  "Monitoring & Infra": { Icon: LineChart, hue: "from-amber-500/15 to-pink-500/15" },
-  Databases: { Icon: Database, hue: "from-cyan-500/15 to-emerald-500/15" },
-  "VFX & Pipeline": { Icon: Film, hue: "from-purple-500/15 to-pink-500/15" },
+  Programming: { Icon: Code2, hue: "from-orange-500/15 to-amber-500/15" },
+  "Operating Systems": { Icon: Terminal, hue: "from-amber-500/15 to-yellow-500/15" },
+  "DevOps Tools": { Icon: Container, hue: "from-orange-500/15 to-red-500/15" },
+  Cloud: { Icon: Cloud, hue: "from-amber-500/15 to-orange-500/15" },
+  "Monitoring & Infra": { Icon: LineChart, hue: "from-red-500/15 to-orange-500/15" },
+  Databases: { Icon: Database, hue: "from-yellow-500/15 to-orange-500/15" },
+  "VFX & Pipeline": { Icon: Film, hue: "from-red-500/15 to-pink-500/15" },
 };
 
 export default function ClassicSkills() {
@@ -38,7 +38,7 @@ export default function ClassicSkills() {
           {Object.entries(skills).map(([category, items], idx) => {
             const meta = CATEGORY_META[category] || {
               Icon: Code2,
-              hue: "from-cyan-500/15 to-purple-500/15",
+              hue: "from-orange-500/15 to-red-500/15",
             };
             const { Icon, hue } = meta;
 
@@ -56,7 +56,7 @@ export default function ClassicSkills() {
                 />
 
                 <div className="relative flex items-center gap-3 mb-5">
-                  <div className="w-11 h-11 rounded-xl grid place-items-center bg-white/[0.04] border border-white/10 text-cyan-300">
+                  <div className="w-11 h-11 rounded-xl grid place-items-center bg-white/[0.04] border border-white/10 text-orange-300">
                     <Icon className="w-5 h-5" />
                   </div>
                   <h3 className="font-semibold text-white text-base"

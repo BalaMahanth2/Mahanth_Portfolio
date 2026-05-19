@@ -135,25 +135,36 @@ body {
 
 /* ============================================================
    CLASSIC STYLE — premium dark developer portfolio
-   Inspired by Saravanan-style minimal-luxury Vercel portfolios.
-   Activated by `body.classic-body`.
+   Orange accent palette (orange/amber/red), Space Grotesk type.
+   Activated by `body.classic-body`. Custom mode is unaffected.
    ============================================================ */
 
 body.classic-body {
-  background-color: #0b0f19;
-  color: #e2e8f0;
+  /* Orange palette tokens — single source of truth for Classic accents. */
+  --c-accent:        #fb923c;            /* orange-400 — primary */
+  --c-accent-soft:   #fdba74;            /* orange-300 — text on dark */
+  --c-accent-2:      #f59e0b;            /* amber-500 — mid gradient */
+  --c-accent-3:      #ef4444;            /* red-500   — gradient end */
+  --c-accent-deep:   #ea580c;            /* orange-600 — hover/emphasis */
+  --c-accent-glow:   rgba(251, 146, 60, 0.35);
+  --c-accent-glow-2: rgba(239, 68, 68, 0.25);
+  --c-bg:            #0b0f19;
+  --c-text:          #e2e8f0;
+
+  background-color: var(--c-bg);
+  color: var(--c-text);
   font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
 }
 
 body.classic-body::-webkit-scrollbar-track {
-  background: #0b0f19;
+  background: var(--c-bg);
 }
 body.classic-body::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #38bdf8, #6366f1);
+  background: linear-gradient(180deg, var(--c-accent), var(--c-accent-3));
 }
 
 body.classic-body ::selection {
-  background: rgba(56, 189, 248, 0.35);
+  background: var(--c-accent-glow);
   color: #fff;
 }
 
@@ -164,9 +175,9 @@ body.classic-body::before {
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 800px 500px at 15% 0%, rgba(56, 189, 248, 0.10), transparent 60%),
-    radial-gradient(ellipse 700px 500px at 85% 30%, rgba(99, 102, 241, 0.10), transparent 60%),
-    radial-gradient(ellipse 600px 400px at 50% 100%, rgba(168, 85, 247, 0.08), transparent 60%);
+    radial-gradient(ellipse 800px 500px at 15% 0%, rgba(251, 146, 60, 0.10), transparent 60%),
+    radial-gradient(ellipse 700px 500px at 85% 30%, rgba(245, 158, 11, 0.10), transparent 60%),
+    radial-gradient(ellipse 600px 400px at 50% 100%, rgba(239, 68, 68, 0.08), transparent 60%);
   z-index: 0;
 }
 
@@ -210,7 +221,7 @@ body.classic-body::before {
   letter-spacing: 0.3em;
   font-size: 0.7rem;
   font-weight: 500;
-  color: #38bdf8;
+  color: var(--c-accent);
   font-family: "Space Grotesk", "Inter", sans-serif;
 }
 
@@ -218,12 +229,12 @@ body.classic-body::before {
   font-family: "Space Grotesk", "Inter", sans-serif;
   font-weight: 600;
   font-size: 0.85rem;
-  color: #38bdf8;
+  color: var(--c-accent);
   letter-spacing: 0.1em;
 }
 
 .classic-grad-text {
-  background: linear-gradient(90deg, #38bdf8 0%, #818cf8 50%, #a78bfa 100%);
+  background: linear-gradient(90deg, #fb923c 0%, #f59e0b 50%, #ef4444 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -238,11 +249,11 @@ body.classic-body::before {
   transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s, background 0.3s;
 }
 .classic-glass:hover {
-  border-color: rgba(56, 189, 248, 0.35);
+  border-color: rgba(251, 146, 60, 0.35);
   background: rgba(255, 255, 255, 0.04);
   box-shadow:
-    0 0 0 1px rgba(56, 189, 248, 0.10),
-    0 20px 60px -20px rgba(56, 189, 248, 0.25);
+    0 0 0 1px rgba(251, 146, 60, 0.10),
+    0 20px 60px -20px rgba(251, 146, 60, 0.25);
 }
 
 .classic-card-glow {
@@ -259,7 +270,7 @@ body.classic-body::before {
   inset: -1px;
   border-radius: 16px;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0), rgba(56, 189, 248, 0));
+  background: linear-gradient(135deg, rgba(251, 146, 60, 0), rgba(251, 146, 60, 0));
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -270,18 +281,18 @@ body.classic-body::before {
 }
 .classic-card-glow:hover {
   transform: translateY(-4px);
-  border-color: rgba(56, 189, 248, 0.30);
+  border-color: rgba(251, 146, 60, 0.30);
   box-shadow:
-    0 25px 70px -25px rgba(56, 189, 248, 0.30),
-    0 0 0 1px rgba(56, 189, 248, 0.08);
+    0 25px 70px -25px rgba(251, 146, 60, 0.30),
+    0 0 0 1px rgba(251, 146, 60, 0.08);
 }
 .classic-card-glow:hover::before {
-  background: linear-gradient(135deg, rgba(56,189,248,0.6), rgba(168,85,247,0.4));
+  background: linear-gradient(135deg, rgba(251,146,60,0.6), rgba(239,68,68,0.4));
 }
 
 .classic-link {
   position: relative;
-  color: #e2e8f0;
+  color: var(--c-text);
   transition: color 0.2s;
 }
 .classic-link::after {
@@ -291,11 +302,11 @@ body.classic-body::before {
   right: 100%;
   bottom: -2px;
   height: 1px;
-  background: linear-gradient(90deg, #38bdf8, #a78bfa);
+  background: linear-gradient(90deg, var(--c-accent), var(--c-accent-3));
   transition: right 0.25s ease;
 }
 .classic-link:hover {
-  color: #38bdf8;
+  color: var(--c-accent);
 }
 .classic-link:hover::after {
   right: 0;
@@ -313,27 +324,27 @@ body.classic-body::before {
   transition: all 0.25s ease;
 }
 .classic-btn-primary {
-  background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+  background: linear-gradient(135deg, #f97316 0%, #ef4444 100%);
   color: #ffffff;
   border: 1px solid transparent;
-  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.25);
+  box-shadow: 0 0 0 1px rgba(251, 146, 60, 0.25);
 }
 .classic-btn-primary:hover {
   transform: translateY(-2px);
   box-shadow:
-    0 12px 30px -10px rgba(56, 189, 248, 0.55),
-    0 0 0 1px rgba(56, 189, 248, 0.45);
+    0 12px 30px -10px rgba(251, 146, 60, 0.55),
+    0 0 0 1px rgba(251, 146, 60, 0.45);
 }
 .classic-btn-ghost {
   background: rgba(255, 255, 255, 0.03);
-  color: #e2e8f0;
+  color: var(--c-text);
   border: 1px solid rgba(255, 255, 255, 0.10);
   backdrop-filter: blur(8px);
 }
 .classic-btn-ghost:hover {
-  background: rgba(56, 189, 248, 0.08);
-  border-color: rgba(56, 189, 248, 0.4);
-  color: #38bdf8;
+  background: rgba(251, 146, 60, 0.08);
+  border-color: rgba(251, 146, 60, 0.4);
+  color: var(--c-accent);
   transform: translateY(-2px);
 }
 
@@ -350,29 +361,37 @@ body.classic-body::before {
   transition: all 0.2s;
 }
 .classic-chip:hover {
-  border-color: rgba(56, 189, 248, 0.4);
-  color: #38bdf8;
-  background: rgba(56, 189, 248, 0.06);
+  border-color: rgba(251, 146, 60, 0.4);
+  color: var(--c-accent);
+  background: rgba(251, 146, 60, 0.06);
 }
 
 .classic-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(56,189,248,0.45), transparent);
+  background: linear-gradient(90deg, transparent, rgba(251,146,60,0.45), transparent);
   width: 100%;
+}
+
+/* Active nav link state (Classic) */
+.classic-nav-active {
+  color: var(--c-accent) !important;
+}
+.classic-nav-active::after {
+  transform: scaleX(1) !important;
 }
 
 /* Hero orb graphic ambient pulse */
 @keyframes classic-orb-pulse {
   0%, 100% {
     box-shadow:
-      0 0 60px 10px rgba(56, 189, 248, 0.35),
-      0 0 120px 40px rgba(99, 102, 241, 0.2),
+      0 0 60px 10px rgba(251, 146, 60, 0.35),
+      0 0 120px 40px rgba(239, 68, 68, 0.2),
       inset 0 0 40px rgba(255, 255, 255, 0.06);
   }
   50% {
     box-shadow:
-      0 0 90px 20px rgba(56, 189, 248, 0.55),
-      0 0 180px 60px rgba(99, 102, 241, 0.35),
+      0 0 90px 20px rgba(251, 146, 60, 0.55),
+      0 0 180px 60px rgba(239, 68, 68, 0.35),
       inset 0 0 60px rgba(255, 255, 255, 0.10);
   }
 }
