@@ -54,9 +54,9 @@ export default function ClassicHero() {
   return (
     <section
       id="home"
-      className="classic-section pt-32 min-h-screen flex items-center"
+      className="classic-section pt-24 sm:pt-32 lg:min-h-screen lg:flex lg:items-center"
     >
-      <div className="classic-container grid lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full">
+      <div className="classic-container grid lg:grid-cols-2 gap-8 lg:gap-20 items-center w-full">
         {/* LEFT */}
         <div className="order-2 lg:order-1">
           <motion.p
@@ -169,12 +169,12 @@ export default function ClassicHero() {
           </motion.div>
         </div>
 
-        {/* RIGHT */}
+        {/* RIGHT — hero orb (hidden on mobile to give content breathing room) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.2 }}
-          className="order-1 lg:order-2 flex items-center justify-center"
+          className="hidden lg:flex lg:order-2 items-center justify-center"
         >
           <ClassicHeroGraphic />
         </motion.div>

@@ -184,14 +184,29 @@ body.classic-body::before {
 .classic-section {
   position: relative;
   width: 100%;
-  padding: 6rem 1rem;
+  padding: 4rem 1.25rem;     /* mobile — more side air, less vertical bloat */
   z-index: 1;
 }
 @media (min-width: 640px) {
-  .classic-section { padding: 6rem 1.5rem; }
+  .classic-section { padding: 5.5rem 1.75rem; }
 }
 @media (min-width: 1024px) {
   .classic-section { padding: 7rem 2rem; }
+}
+
+/* Mobile-only refinements for Classic — more breathing room inside cards/grids */
+@media (max-width: 639px) {
+  body.classic-body .classic-card-glow,
+  body.classic-body .classic-glass {
+    border-radius: 14px;
+  }
+  body.classic-body .classic-h2 {
+    font-size: 1.85rem;
+    line-height: 1.2;
+  }
+  body.classic-body section .grid {
+    gap: 1rem;
+  }
 }
 
 .classic-container {
