@@ -11,7 +11,7 @@ export default function About() {
         <SectionTitle
           kicker="// about"
           title="About Me"
-          subtitle="From 1+ year of pipeline tooling in VFX to building cloud-native DevOps infrastructure in IT."
+          subtitle="Building automation-first infrastructure with a strong focus on reliability, scalability, and operational efficiency."
         />
 
         <div className="grid lg:grid-cols-5 gap-8 items-start">

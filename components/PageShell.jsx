@@ -35,7 +35,7 @@ export default function PageShell() {
         <ClassicExperience />
         <ClassicTimeline />
         <ClassicCertifications />
-        <ClassicGitHubStats />
+        {/* <ClassicGitHubStats /> */}
         <ClassicContact />
       </>
     );
@@ -50,7 +50,7 @@ export default function PageShell() {
       <Experience />
       <Timeline />
       <Certifications />
-      <GitHubStats />
+      {/* <GitHubStats /> */}
       <Contact />
     </>
   );

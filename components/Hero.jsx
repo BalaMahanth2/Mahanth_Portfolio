@@ -68,7 +68,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full glass border-cyan-400/30 text-xs font-mono text-cyan-300"
           >
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Open to DevOps & Cloud roles · VFX → IT</span>
+            <span>DevOps Engineer | Cloud & Infrastructure Automation</span>
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
@@ -81,7 +81,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.05 }}
             className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05]"
           >
-            <span className="text-white/85">Hi, I&apos;m </span>
+            <span className="text-white/85">Hello, I am</span>
             <span className="neon-text">{profile.name}</span>
             <span className="text-cyan-300 animate-blink">.</span>
           </motion.h1>
@@ -105,10 +105,21 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.25 }}
             className="text-white/65 max-w-xl leading-relaxed"
           >
-            1+ year as a Junior Pipeline Developer in VFX — Python automation,
-            Linux, production reliability. Now actively shifting into{" "}
-            <span className="text-cyan-300">DevOps Engineering</span> in IT,
-            with hands-on focus on Docker, Kubernetes, CI/CD, and AWS.
+            Junior DevOps Engineer with 1+ year of hands-on experience building
+            CI/CD pipelines, automating Linux infrastructure, managing
+            containerized applications, and developing scalable deployment
+            workflows using Python, Docker, GitHub Actions, Ansible, and AWS.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="text-white/65 max-w-xl leading-relaxed"
+          >
+            Currently working in the VFX industry managing production
+            infrastructure, automation systems, and distributed Linux
+            environments across 30+ production nodes.
           </motion.p>
 
           <motion.div
@@ -175,9 +186,9 @@ export default function Hero() {
             title="mahanth@devops:~ — bash"
             lines={[
               { type: "cmd", text: "whoami" },
-              { type: "output", text: "yakkala bala mahanth · jr pipeline dev (1+ yr)" },
+              { type: "output", text: "yakkala bala mahanth · jr devops engineer (1+ yr)" },
               { type: "cmd", text: "cat status.yaml" },
-              { type: "output", text: "current:   vfx pipeline · python · linux" },
+              { type: "output", text: "current:   vfx production infra · automation · linux" },
               { type: "output", text: "shifting:  → it · devops engineer" },
               { type: "output", text: "learning:  [docker, k8s, aws, ci/cd]" },
               { type: "cmd", text: "./deploy.sh next-role" },

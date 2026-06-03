@@ -27,7 +27,7 @@ export default function ClassicAbout() {
           number="01."
           kicker="About"
           title="A bit about me"
-          subtitle="Pipeline engineering today, DevOps engineering tomorrow — both grounded in the same automation-first mindset."
+          subtitle="Building automation-first infrastructure with a strong focus on reliability, scalability, and operational efficiency."
         />
 
         <div className="grid lg:grid-cols-5 gap-10 items-center">

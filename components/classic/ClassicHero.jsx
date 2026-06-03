@@ -95,7 +95,7 @@ export default function ClassicHero() {
             className="text-xl sm:text-2xl mt-6 text-white/75 font-light min-h-[36px]"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
-            I&apos;m a{" "}
+            I&apos;m a{' '}
             <span className="text-orange-300 font-medium">{typed}</span>
             <span className="inline-block w-[2px] h-6 bg-orange-400 ml-1 align-middle animate-blink" />
           </motion.div>
@@ -106,19 +106,27 @@ export default function ClassicHero() {
             transition={{ duration: 0.6, delay: 0.25 }}
             className="mt-6 text-white/60 max-w-xl leading-relaxed text-[16px]"
           >
-            Junior Pipeline Developer with 1+ year of hands-on experience in
-            the VFX industry — working with{" "}
-            <span className="text-white/85">Python automation</span>,{" "}
-            <span className="text-white/85">Linux systems</span>, and{" "}
-            <span className="text-white/85">Houdini / AYON pipelines</span>.
-            Actively transitioning into DevOps Engineering on the IT side,
-            focused on Docker, Kubernetes, CI/CD, and AWS.
+            Junior DevOps Engineer with 1+ year of hands-on experience building
+            CI/CD pipelines, automating Linux infrastructure, managing
+            containerized applications, and developing scalable deployment
+            workflows using Python, Docker, GitHub Actions, Ansible, and AWS.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.35 }}
+            className="mt-6 text-white/60 max-w-xl leading-relaxed text-[16px]"
+          >
+            Currently working in the VFX industry managing production
+            infrastructure, automation systems, and distributed Linux
+            environments across 30+ production nodes.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.35 }}
+            transition={{ duration: 0.6, delay: 0.45 }}
             className="flex flex-wrap gap-3 mt-9"
           >
             <a href="#projects" className="classic-btn classic-btn-primary">
@@ -135,7 +143,7 @@ export default function ClassicHero() {
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.45 }}
+            transition={{ duration: 0.6, delay: 0.55 }}
             className="flex items-center gap-4 mt-8"
           >
             <a
