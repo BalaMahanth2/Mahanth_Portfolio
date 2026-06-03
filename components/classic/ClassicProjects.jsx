@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import {
-  Github,
+  FileText,
   ExternalLink,
   Container,
   Cloud,
@@ -83,15 +83,15 @@ export default function ClassicProjects() {
                       {p.title}
                     </h3>
                     <div className="flex items-center gap-1.5 shrink-0">
-                      {p.github && (
+                      {p.docs && (
                         <a
-                          aria-label="GitHub"
-                          href={p.github}
+                          aria-label="Documentation"
+                          href={p.docs}
                           target="_blank"
                           rel="noreferrer"
                           className="p-1.5 rounded-md text-white/55 hover:text-orange-300 hover:bg-white/[0.05] transition"
                         >
-                          <Github className="w-4 h-4" />
+                          <FileText className="w-4 h-4" />
                         </a>
                       )}
                       {p.demo && (

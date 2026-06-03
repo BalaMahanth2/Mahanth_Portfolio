@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, ExternalLink, FolderGit2 } from "lucide-react";
+import { FileText, ExternalLink, FolderGit2 } from "lucide-react";
 import SectionTitle from "./SectionTitle";
 import { projects } from "@/lib/data";
 
@@ -36,15 +36,15 @@ export default function Projects() {
                   <FolderGit2 className="w-5 h-5 text-cyan-300" />
                 </div>
                 <div className="flex items-center gap-2">
-                  {p.github && (
+                  {p.docs && (
                     <a
-                      aria-label="GitHub repo"
-                      href={p.github}
+                      aria-label="Documentation"
+                      href={p.docs}
                       target="_blank"
                       rel="noreferrer"
                       className="p-1.5 rounded-md border border-white/10 text-white/70 hover:text-cyan-300 hover:border-cyan-400/60 transition"
                     >
-                      <Github className="w-4 h-4" />
+                      <FileText className="w-4 h-4" />
                     </a>
                   )}
                   {p.demo && (
@@ -78,12 +78,17 @@ export default function Projects() {
 
               <div className="relative mt-5 flex gap-2">
                 <a
-                  href={p.github}
-                  target="_blank"
+                  href={p.docs || "#"}
+                  target={p.docs ? "_blank" : undefined}
                   rel="noreferrer"
-                  className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-md text-xs font-mono border border-white/10 hover:border-cyan-400/60 hover:text-cyan-300 transition"
+                  aria-disabled={!p.docs}
+                  className={`flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-md text-xs font-mono transition ${
+                    p.docs
+                      ? "border border-white/10 hover:border-cyan-400/60 hover:text-cyan-300"
+                      : "border border-white/10 text-white/40 cursor-not-allowed"
+                  }`}
                 >
-                  <Github className="w-3.5 h-3.5" /> Code
+                  <FileText className="w-3.5 h-3.5" /> {p.docs ? "Docs" : "Soon"}
                 </a>
                 <a
                   href={p.demo || "#"}
