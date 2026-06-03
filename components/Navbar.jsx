@@ -30,12 +30,12 @@ export default function Navbar() {
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <a
           href="#home"
-          className="flex items-center gap-2 font-mono text-sm font-semibold group"
+          className="flex items-center gap-2 font-mono text-sm font-semibold group shrink-0"
         >
-          <span className="grid place-items-center w-8 h-8 rounded-md bg-gradient-to-br from-cyan-500/30 to-purple-600/30 border border-cyan-400/30 group-hover:shadow-neon transition">
+          <span className="grid place-items-center w-8 h-8 rounded-md bg-gradient-to-br from-cyan-500/30 to-purple-600/30 border border-cyan-400/30 group-hover:shadow-neon transition shrink-0">
             <Terminal className="w-4 h-4 text-cyan-300" />
           </span>
-          <span className="neon-text">~/{profile.name.toLowerCase()}</span>
+          <span className="neon-text whitespace-nowrap">~/{profile.name.toLowerCase()}</span>
           <span className="text-white/40">$</span>
         </a>
 

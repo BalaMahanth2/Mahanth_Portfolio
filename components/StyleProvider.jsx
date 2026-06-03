@@ -3,7 +3,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
 const STORAGE_KEY = "portfolio-style";
-const DEFAULT_STYLE = "classic"; // Classic is the default landing experience.
+const DEFAULT_STYLE = "custom"; // Custom is the default landing experience.
 
 const StyleContext = createContext({
   style: DEFAULT_STYLE,

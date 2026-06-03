@@ -81,7 +81,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.05 }}
             className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05]"
           >
-            <span className="text-white/85">Hello, I am</span>
+            <span className="block whitespace-nowrap text-white/85">Hello, I am</span>
             <span className="neon-text">{profile.name}</span>
             <span className="text-cyan-300 animate-blink">.</span>
           </motion.h1>
