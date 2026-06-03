@@ -12,9 +12,10 @@ import {
   Workflow,
   Cloud,
   Rocket,
+  Briefcase,
 } from "lucide-react";
 
-const ICONS = { Code2, Terminal, GitBranch, Box, Layers, Workflow, Cloud, Rocket };
+const ICONS = { Code2, Terminal, GitBranch, Box, Layers, Workflow, Cloud, Rocket, Briefcase };
 
 export default function ClassicTimeline() {
   return (
@@ -71,6 +72,11 @@ export default function ClassicTimeline() {
                     >
                       {t.title}
                     </h3>
+                    {t.date && (
+                      <span className="mt-1 inline-block text-xs text-orange-300/90 tracking-[0.14em] uppercase">
+                        {t.date}
+                      </span>
+                    )}
                     <p className="mt-1.5 text-sm text-white/55 leading-relaxed">
                       {t.desc}
                     </p>

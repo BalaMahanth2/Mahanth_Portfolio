@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
-  Download,
   Mail,
   Github,
   Linkedin,
@@ -131,9 +130,6 @@ export default function ClassicHero() {
           >
             <a href="#projects" className="classic-btn classic-btn-primary">
               View Projects <ArrowRight className="w-4 h-4" />
-            </a>
-            <a href={profile.resume} download className="classic-btn classic-btn-ghost">
-              <Download className="w-4 h-4" /> Resume
             </a>
             <a href="#contact" className="classic-btn classic-btn-ghost">
               <Mail className="w-4 h-4" /> Contact

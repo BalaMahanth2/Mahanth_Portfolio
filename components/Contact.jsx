@@ -6,7 +6,6 @@ import {
   Mail,
   Github,
   Linkedin,
-  Download,
   MapPin,
   Send,
   CheckCircle2,
@@ -73,14 +72,6 @@ export default function Contact() {
               value={profile.location}
               href={null}
             />
-            <a
-              href={profile.resume}
-              download
-              className="btn-primary w-full justify-center mt-2"
-            >
-              <Download className="w-4 h-4" />
-              Download Resume
-            </a>
           </motion.div>
 
           <motion.form

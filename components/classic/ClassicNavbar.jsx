@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X, Download } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { navLinks, profile } from "@/lib/data";
 
 // Floating switcher is ~200px wide on desktop, ~90px on mobile (icon-only).
@@ -102,20 +102,12 @@ export default function ClassicNavbar() {
           })}
         </ul>
 
-        {/* Desktop right-side actions — reserve clearance for floating switcher */}
+        {/* Desktop right-side spacer — reserve clearance for floating switcher */}
         <div
-          className="hidden md:flex items-center gap-3 shrink-0"
+          className="hidden md:block shrink-0"
           style={{ paddingRight: `${SWITCHER_DESKTOP}px` }}
-        >
-          <a
-            href={profile.resume}
-            download
-            className="classic-btn classic-btn-ghost text-xs px-3.5 py-2"
-          >
-            <Download className="w-3.5 h-3.5" />
-            Resume
-          </a>
-        </div>
+          aria-hidden="true"
+        />
 
         {/* Mobile menu trigger — also reserve clearance */}
         <button
@@ -156,16 +148,6 @@ export default function ClassicNavbar() {
                   </li>
                 );
               })}
-              <li className="pt-2">
-                <a
-                  href={profile.resume}
-                  download
-                  onClick={() => setOpen(false)}
-                  className="classic-btn classic-btn-primary w-full justify-center"
-                >
-                  <Download className="w-4 h-4" /> Resume
-                </a>
-              </li>
             </ul>
           </motion.div>
         )}

@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
-  Download,
   Mail,
   Github,
   Linkedin,
@@ -130,9 +129,6 @@ export default function Hero() {
           >
             <a href="#projects" className="btn-primary">
               View Projects <ArrowRight className="w-4 h-4" />
-            </a>
-            <a href={profile.resume} download className="btn-ghost">
-              <Download className="w-4 h-4" /> Download Resume
             </a>
             <a href="#contact" className="btn-ghost">
               <Mail className="w-4 h-4" /> Contact Me

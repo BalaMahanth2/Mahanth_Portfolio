@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import SectionTitle from "./SectionTitle";
 import { certifications } from "@/lib/data";
-import { ShieldCheck, Cloud, Terminal, Award } from "lucide-react";
+import { ShieldCheck, Cloud, Terminal, Award, ExternalLink } from "lucide-react";
 
 const ICONS = { ShieldCheck, Cloud, Terminal };
 
@@ -52,6 +52,16 @@ export default function Certifications() {
                 <p className="relative text-sm text-white/65 mt-3 leading-relaxed">
                   {c.desc}
                 </p>
+                {c.link && (
+                  <a
+                    href={c.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="relative mt-4 inline-flex items-center gap-1.5 text-xs font-mono text-cyan-300 hover:text-cyan-200 transition"
+                  >
+                    Verify <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                )}
               </motion.div>
             );
           })}

@@ -6,7 +6,6 @@ import {
   Mail,
   Github,
   Linkedin,
-  Download,
   MapPin,
   Send,
   CheckCircle2,
@@ -53,13 +52,6 @@ export default function ClassicContact() {
             <Row Icon={Linkedin} label="LinkedIn" value="bala-mahanth" href={profile.linkedin} />
             <Row Icon={Github} label="GitHub" value={`@${profile.github.split("/").pop()}`} href={profile.github} />
             <Row Icon={MapPin} label="Location" value={profile.location} />
-            <a
-              href={profile.resume}
-              download
-              className="classic-btn classic-btn-primary w-full justify-center mt-2"
-            >
-              <Download className="w-4 h-4" /> Download Resume
-            </a>
           </motion.div>
 
           <motion.form

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ShieldCheck, Cloud, Terminal, Award } from "lucide-react";
+import { ShieldCheck, Cloud, Terminal, Award, ExternalLink } from "lucide-react";
 import ClassicSectionTitle from "./ClassicSectionTitle";
 import { certifications } from "@/lib/data";
 
@@ -49,6 +49,16 @@ export default function ClassicCertifications() {
                 <p className="text-sm text-white/55 mt-3 leading-relaxed">
                   {c.desc}
                 </p>
+                {c.link && (
+                  <a
+                    href={c.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-4 inline-flex items-center gap-1.5 text-xs text-orange-300 hover:text-orange-200 transition"
+                  >
+                    Verify <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                )}
               </motion.div>
             );
           })}
