@@ -1,0 +1,20 @@
+# syntax=docker/dockerfile:1
+# Development image — runs `next dev` with hot reload.
+# Source is bind-mounted at runtime (see docker-compose.dev.yml), so code
+# edits on your host show up live without rebuilding the image.
+
+FROM node:20-alpine
+WORKDIR /app
+
+# Install dependencies (this layer is cached until package files change)
+COPY package.json package-lock.json* ./
+RUN npm ci
+
+# Copy the rest as a fallback; the bind mount overlays this at runtime
+COPY . .
+
+ENV NEXT_TELEMETRY_DISABLED=1
+EXPOSE 3000
+
+# Bind to 0.0.0.0 so the dev server is reachable from outside the container
+CMD ["npm", "run", "dev", "--", "-H", "0.0.0.0", "-p", "3000"]

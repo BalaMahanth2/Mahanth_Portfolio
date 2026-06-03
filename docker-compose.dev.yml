@@ -1,0 +1,21 @@
+services:
+  portfolio-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    image: mahanth-portfolio-dev
+    container_name: mahanth-portfolio-dev
+    ports:
+      - "3000:3000"
+    volumes:
+      # Mount your source into the container -> edits are reflected live
+      - .:/app
+      # Keep the container's own node_modules / .next (don't let the host shadow them)
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NODE_ENV=development
+      - NEXT_TELEMETRY_DISABLED=1
+      # Needed for hot reload to work across the bind mount on Windows/WSL2
+      - WATCHPACK_POLLING=true
+    restart: unless-stopped
