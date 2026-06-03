@@ -81,7 +81,7 @@ export default function ClassicHero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-3 text-sm text-white/40 tracking-[0.25em] uppercase"
+            className="mt-3 text-sm text-white/40 tracking-[0.25em] uppercase whitespace-nowrap"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             {profile.name}
