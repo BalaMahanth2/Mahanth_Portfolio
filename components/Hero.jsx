@@ -176,7 +176,7 @@ export default function Hero() {
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="lg:justify-self-end w-full"
+          className="lg:justify-self-end w-full mt-6 lg:mt-20"
         >
           <TerminalBlock
             title="mahanth@devops:~ — bash"
